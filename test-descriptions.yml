@@ -2,7 +2,7 @@ strings:
   - &nohc Header compression is disabled on both EUT1 and EUT2
   - &hc Header compression is enabled on both EUT1 and EUT2
   - &e64 EUT1 and EUT2 are configured to use EUI-64
-  - &e16 EUT1 and EUT2 are configured to use 16-bit short address
+  - &e16 EUT1 and EUT2 are configured to use 16-bit short a addressddress
   - &h64 EUT1 and EUT2 are configured with a default hop limit of 64
   - &h63 EUT1 and EUT2 are configured with a default hop limit of 63
   - &nn Node-Node
@@ -17,7 +17,7 @@ strings:
 
 
 TD_6LoWPAN_FORMAT_01:
-  obj: Check that EUTs correctly handle uncompressed 6LoWPAN packets when EUI-64 link local address is used
+  obj: Check that EUTs correctly handle uncompressed 6LoWPAN packets (EUI-64 link-local)
   cfg: *nn
   ref: RFC 4944 5.1, 8
   pre:
@@ -40,7 +40,7 @@ TD_6LoWPAN_FORMAT_01:
     - c: The data received in the echo reply message is identical to that sent in EUT1's echo request message
 
 TD_6LoWPAN_FORMAT_05:
-  obj: Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes when EUI-64 link local address is used
+  obj: Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (EUI-64 link-local)
   cfg: *nn
   ref: RFC 4944 5.1, 8
   pre:
@@ -80,7 +80,7 @@ TD_6LoWPAN_ND_01:
     - v: The host updates the status of the tentative address
 
 TD_6LoWPAN_ND_06:
-  obj: Check host behavior under multiple prefixes
+  obj: Check host behavior under multiple prefixes (EUI-64)
   cfg: *hr
   ref: RFC 4861 3.1
   pre:
@@ -106,7 +106,7 @@ TD_6LoWPAN_ND_06:
 
 
 TD_6LoWPAN_HC_01:
-  obj: Check that EUTs correctly handle compressed 6LoWPAN packets when EUI-64 link local address is used
+  obj: Check that EUTs correctly handle compressed 6LoWPAN packets (EUI-64 link-local)
   cfg: *nn
   ref: RFC 6282 section 3
   pre:
@@ -134,7 +134,7 @@ TD_6LoWPAN_HC_01:
   
 
 TD_6LoWPAN_HC_03:
-  obj: Check that EUTs correctly handle compressed 6LoWPAN packets when EUI-64 link local address is used
+  obj: Check that EUTs correctly handle compressed 6LoWPAN packets (EUI-64 link-local, hop limit=63)
   cfg: *nn
   ref: RFC 6282 section 3
   pre:
@@ -165,7 +165,7 @@ TD_6LoWPAN_HC_03:
 
 
 TD_6LoWPAN_HC_05:
-  obj: Check that EUTs correctly handle compressed UDP packets
+  obj: Check that EUTs correctly handle compressed UDP packets (EUI-64, server port 5683)
   cfg: *hr
   ref: RFC 6282, 4.3
   pre:
@@ -187,7 +187,7 @@ TD_6LoWPAN_HC_05:
 
 
 TD_6LoWPAN_HC_07:
-  obj: Check that EUTs correctly handle compressed UDP packets
+  obj: Check that EUTs correctly handle compressed UDP packets (EUI-64, server port 61616)
   cfg: *hr
   ref: RFC 6282, 4.3
   pre:
@@ -208,7 +208,7 @@ TD_6LoWPAN_HC_07:
   
 
 TD_6LoWPAN_ND_HC_01:
-  obj: Check that EUTs make use of context 0 with EUI-64 addresses
+  obj: Check that EUTs make use of context 0 (EUI-64)
   cfg: *hr
   ref: RFC 6775 5.4, RFC 6282 3.1.1
   pre:
@@ -235,7 +235,7 @@ TD_6LoWPAN_ND_HC_01:
 
 
 TD_6LoWPAN_ND_HC_03:
-  obj: Check that EUTs make use of context ≠ 0 with EUI-64 addresses
+  obj: Check that EUTs make use of context ≠ 0 (EUI-64)
   cfg: *hr
   ref: RFC 6775 5.4, RFC 6282 3.1.2
   pre:
@@ -266,7 +266,7 @@ TD_6LoWPAN_ND_HC_03:
 
 
 TD_6LoWPAN_FORMAT_02:
-  obj: Check that EUTs correctly handle uncompressed 6LoWPAN packets when 16 bit short link local address is used
+  obj: Check that EUTs correctly handle uncompressed 6LoWPAN packets (16-bit link-local)
   cfg: *nn
   ref: RFC 4944 5.1, 8
   pre:
@@ -289,7 +289,7 @@ TD_6LoWPAN_FORMAT_02:
     - c: The data received in the echo reply message is identical to that sent in EUT1's echo request message
 
 TD_6LoWPAN_FORMAT_06:
-  obj: Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes when 16 bit short link local address is used
+  obj: Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (16-bit link-local)
   cfg: *nn
   ref: RFC 4944 5.1, 8
   pre:
@@ -307,7 +307,7 @@ TD_6LoWPAN_FORMAT_06:
 
       
 TD_6LoWPAN_ND_02:
-  obj: Check that a host is able to register its global IPv6 address (16 bit short)
+  obj: Check that a host is able to register its global IPv6 address (16-bit)
   cfg: *hr
   ref: RFC 6775 10.2
   pre: &prend01
@@ -322,14 +322,14 @@ TD_6LoWPAN_ND_02:
       - Link local addresses are used.
       - The L bit is not set.
     - v: The host receives the Router Advertisement from the router
-    - c: The host configures its tentative global IPv6 address based on the PIO information in RA from the Router (16 bit short)
+    - c: The host configures its tentative global IPv6 address based on the PIO information in RA from the Router (16-bit short)
     - c: The host registers its tentative address by sending a unicast Neighbor Solicitation containing ARO and SLLAO. Source = GP16
     - v: The Router receives the Neighbor Solicitation from the host.
     - c: The Router sends a Neighbor Advertisement with Status set to 0 (Dest = GP16)
     - v: The host updates the status of the tentative address
 
 TD_6LoWPAN_ND_07:
-  obj: Check host behavior under multiple prefixes
+  obj: Check host behavior under multiple prefixes (16-bit)
   cfg: *hr
   ref: RFC 4861 3.1
   pre:
@@ -345,7 +345,7 @@ TD_6LoWPAN_ND_07:
       - Link local addresses are used.
       - The L bit is not set.
     - v: The host receives the Router Advertisement from the router
-    - c: The host configures a number of tentative global IPv6 address based on the PIO information in RA from the Router (16 bit short)
+    - c: The host configures a number of tentative global IPv6 address based on the PIO information in RA from the Router (16-bit short)
     - c: The host registers its tentative addresses by sending unicast Neighbor Solicitations containing ARO and SLLAO. Source = GP16
     - v: The Router receives the Neighbor Solicitations from the host.
     - c: The Router sends Neighbor Advertisements with Status set to 0 (Dest = GP16)
@@ -355,7 +355,7 @@ TD_6LoWPAN_ND_07:
 
 
 TD_6LoWPAN_HC_02:
-  obj: Check that EUTs correctly handle compressed 6LoWPAN packets when 16 bit short link local address is used
+  obj: Check that EUTs correctly handle compressed 6LoWPAN packets (16-bit)
   cfg: *nn
   ref: RFC 6282 section 3
   pre:
@@ -383,7 +383,7 @@ TD_6LoWPAN_HC_02:
   
 
 TD_6LoWPAN_HC_04:
-  obj: Check that EUTs correctly handle compressed 6LoWPAN packets when 16 bit short link local address is used
+  obj: Check that EUTs correctly handle compressed 6LoWPAN packets (16-bit link-local, hop limit=63)
   cfg: *nn
   ref: RFC 6282 section 3
   pre:
@@ -414,7 +414,7 @@ TD_6LoWPAN_HC_04:
 
 
 TD_6LoWPAN_HC_06:
-  obj: Check that EUTs correctly handle compressed UDP packets
+  obj: Check that EUTs correctly handle compressed UDP packets (16-bit, server port 5683)
   cfg: *hr
   ref: RFC 6282, 4.3
   pre:
@@ -436,7 +436,7 @@ TD_6LoWPAN_HC_06:
 
 
 TD_6LoWPAN_HC_08:
-  obj: Check that EUTs correctly handle compressed UDP packets
+  obj: Check that EUTs correctly handle compressed UDP packets (16-bit, server port 61616)
   cfg: *hr
   ref: RFC 6282, 4.3
   pre:
@@ -457,7 +457,7 @@ TD_6LoWPAN_HC_08:
   
 
 TD_6LoWPAN_ND_HC_02:
-  obj: Check that EUTs make use of context 0 with 16 bit short addresses
+  obj: Check that EUTs make use of context 0 (16-bit)
   cfg: *hr
   ref: RFC 6775 5.4, RFC 6282 3.1.1
   pre:
@@ -484,7 +484,7 @@ TD_6LoWPAN_ND_HC_02:
 
 
 TD_6LoWPAN_ND_HC_04:
-  obj: Check that EUTs make use of context ≠ 0 with 16 bit short addresses
+  obj: Check that EUTs make use of context ≠ 0 (16-bit)
   cfg: *hr
   ref: RFC 6775 5.4, RFC 6282 3.1.2
   pre:
