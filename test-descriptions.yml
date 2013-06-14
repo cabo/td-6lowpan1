@@ -120,6 +120,7 @@ TD_6LoWPAN_HC_01:
       - Hop Limit is 64, no traffic class or flow label is being used
     - c: EUT1 sends a compressed 6LoWPAN packet containing the Echo Request message to EUT2
     - c: Dispatch value in 6LowPAN packet is “01100x10”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: In IP_HC, HLIM is 10 and the hop limit field is compressed away
     - f: In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
     - v: EUT2 receives the Echo Request message from EUT1
@@ -147,6 +148,7 @@ TD_6LoWPAN_HC_03:
       - Hop Limit is 63, no traffic class or flow label is being used
     - c: EUT1 sends a compressed 6LoWPAN packet containing the Echo Request message to EUT2
     - c: Dispatch value in 6LowPAN packet is “01100x10”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: In IP_HC, HLIM is 00 and the hop limit field is carried in-line
     - f: In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
     - v: EUT2 receives the Echo Request message from EUT1
@@ -220,6 +222,7 @@ TD_6LoWPAN_ND_HC_01:
       - ICMP payload = 4 bytes, total IPv6 size 52 bytes
       - Hop Limit is 64, no traffic class or flow label is being used
     - c: EUT1 sends a 6LoWPAN packet containing the Echo Request message to EUT2
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
     - c: Dispatch value in 6LowPAN packet is “01100x10”
@@ -246,6 +249,7 @@ TD_6LoWPAN_ND_HC_03:
       - ICMP payload = 4 bytes, total IPv6 size 52 bytes
       - Hop Limit is 64, no traffic class or flow label is being used
     - c: EUT1 sends a 6LoWPAN packet containing the Echo Request message to EUT2
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
     - c: A Context Identifier Extension (CID) is used for this
@@ -365,6 +369,7 @@ TD_6LoWPAN_HC_02:
       - Hop Limit is 64, no traffic class or flow label is being used
     - c: EUT1 sends a compressed 6LoWPAN packet containing the Echo Request message to EUT2
     - c: Dispatch value in 6LowPAN packet is “01100x10”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: In IP_HC, HLIM is 10 and the hop limit field is compressed away
     - f: In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
     - v: EUT2 receives the Echo Request message from EUT1
@@ -392,6 +397,7 @@ TD_6LoWPAN_HC_04:
       - Hop Limit is 63, no traffic class or flow label is being used
     - c: EUT1 sends a compressed 6LoWPAN packet containing the Echo Request message to EUT2
     - c: Dispatch value in 6LowPAN packet is “01100x10”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: In IP_HC, HLIM is 00 and the hop limit field is carried in-line
     - f: In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
     - v: EUT2 receives the Echo Request message from EUT1
@@ -465,6 +471,7 @@ TD_6LoWPAN_ND_HC_02:
       - ICMP payload = 4 bytes, total IPv6 size 52 bytes
       - Hop Limit is 64, no traffic class or flow label is being used
     - c: EUT1 sends a 6LoWPAN packet containing the Echo Request message to EUT2
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
     - c: Dispatch value in 6LowPAN packet is “01100x10”
@@ -491,6 +498,7 @@ TD_6LoWPAN_ND_HC_04:
       - ICMP payload = 4 bytes, total IPv6 size 52 bytes
       - Hop Limit is 64, no traffic class or flow label is being used
     - c: EUT1 sends a 6LoWPAN packet containing the Echo Request message to EUT2
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
     - c: A Context Identifier Extension (CID) is used for this
