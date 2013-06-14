@@ -173,10 +173,10 @@ TD_6LoWPAN_HC_05:
     - s:
       - 6LR initiates a CoAP Ping request to Host's CoAP Ping server
     - c: 6LR sends a 6LoWPAN packet containing the CoAP Ping message to Host
-    - f: NH is set, NHC is 11110000, the destination port is uncompressed 5683
+    - f: NH is set, NHC is 111100x0, the source port is compressed to 8 bits (x=1) or uncompressed (x=0), the destination port is uncompressed 5683
     - v: Host receives the CoAP Ping message from 6LR
     - c: Host sends a 6LoWPAN packet containing the CoAP Reset message to 6LR
-    - f: NH is set, NHC is 11110000, the source port is uncompressed 5683
+    - f: NH is set, NHC is 1111000x, the source port is uncompressed 5683, the destination port is compressed to 8 bits (x=1) or uncompressed (x=0)
     - v: 6LR receives the CoAP Reset message from Host
   not: The feature tests check that best compression is used (but this is not a requirement for interoperability)
 
@@ -195,10 +195,10 @@ TD_6LoWPAN_HC_07:
     - s:
       - 6LR initiates a CoAP Ping request to Host's CoAP Ping server
     - c: 6LR sends a 6LoWPAN packet containing the CoAP Ping message to Host
-    - f: NH is set, NHC is 111100x1, the destination port is compressed to 4 bits of 0000 (x=1) or 8 bits of 0xb0 (x=0)
+    - f: NH is set, NHC is 111100xx, the destination port is compressed to 4 bits of 0000 (xx=11) or 8 bits of 0xb0 (xx=01) or uncompressed 61616 (xx=10)
     - v: Host receives the CoAP Ping message from 6LR
     - c: Host sends a 6LoWPAN packet containing the CoAP Reset message to 6LR
-    - f: NH is set, NHC is 1111001x, the source port is compressed to 4 bits of 0000 (x=1) or 8 bits of 0xb0 (x=0)
+    - f: NH is set, NHC is 111100xx, the source port is compressed to 4 bits of 0000 (xx=11) or 8 bits of 0xb0 (x=10) or uncompressed 61616 (xx=01)
     - v: 6LR receives the CoAP Reset message from Host
   not: The feature tests check that best compression is used (but this is not a requirement for interoperability)
 
