@@ -12,6 +12,7 @@ strings:
   - &coaping6 A CoAP ping server is installed on port 61616 of the host
   - &host64 Host is configured to use EUI-64 address
   - &host16 Host is configured to use 16-bit address
+  - &registered Host is up and registered its global address with the Server
 
 
 
@@ -577,6 +578,7 @@ TD_6LoWPAN_ND_03:
   pre:
     - *hchr
     - *host64
+    - *registered
   seq:
     - s: Host sends a sequence of echo requests to 2001:db8::1
     - v: Host sends a unicast NS message to the 6LR to perform NUD
@@ -588,6 +590,7 @@ TD_6LoWPAN_ND_04:
   pre:
     - *hchr
     - *host64
+    - *registered
   seq:
     - s: 6LR sends a sequence of echo requests to Host
     - s: After 10 seconds, echo reply function is disabled on host
@@ -602,6 +605,7 @@ TD_6LoWPAN_ND_05:
     - *hchr
     - *host64
     - *coaping
+    - *registered
   seq:
     - s: 6LR sends a sequence of CoAP pings to Host
     - s: After 10 seconds, CoAP server function is disabled on host
