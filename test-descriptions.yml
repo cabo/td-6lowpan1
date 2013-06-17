@@ -225,11 +225,13 @@ TD_6LoWPAN_ND_HC_01:
     - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
+    - f: The context identifier extension is not present (CID = 0)
     - c: Dispatch value in 6LowPAN packet is “01100x10”
     - v: EUT2 receives the Echo Request message from EUT1
     - c: EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
+    - f: The context identifier extension is not present (CID = 0)
     - c: Dispatch value in 6LowPAN packet is “01100x10”
   not: The feature tests check that good compression is used (but this is not a requirement for interoperability)
 
@@ -474,11 +476,13 @@ TD_6LoWPAN_ND_HC_02:
     - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
+    - f: The context identifier extension is not present (CID = 0)
     - c: Dispatch value in 6LowPAN packet is “01100x10”
     - v: EUT2 receives the Echo Request message from EUT1
     - c: EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
     - f: HLIM is 10 and the hop limit field is compressed away
     - f: The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
+    - f: The context identifier extension is not present (CID = 0)
     - c: Dispatch value in 6LowPAN packet is “01100x10”
   not: The feature tests check that good compression is used (but this is not a requirement for interoperability)
 
