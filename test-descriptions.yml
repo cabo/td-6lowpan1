@@ -12,7 +12,7 @@ strings:
   - &coaping6 A CoAP ping server is installed on port 61616 of the host
   - &host64 Host is configured to use EUI-64 address
   - &host16 Host is configured to use 16-bit address
-  - &registered Host is up and registered its global address with the Server
+  - &registered Host is up and registered its global address with the Router
 
 
 
