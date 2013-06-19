@@ -27,7 +27,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle uncompressed 6LoWPAN packets when EUI-64 link local address is used
+          Check that EUTs correctly handle uncompressed 6LoWPAN packets (EUI-64 link-local)
         </td>
       </tr>
       <tr>
@@ -146,7 +146,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle uncompressed 6LoWPAN packets when 16 bit short link local address is used
+          Check that EUTs correctly handle uncompressed 6LoWPAN packets (16-bit link-local)
         </td>
       </tr>
       <tr>
@@ -515,7 +515,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes when EUI-64 link local address is used
+          Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (EUI-64 link-local)
         </td>
       </tr>
       <tr>
@@ -653,7 +653,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes when 16 bit short link local address is used
+          Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (16-bit link-local)
         </td>
       </tr>
       <tr>
@@ -791,7 +791,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed 6LoWPAN packets when EUI-64 link local address is used
+          Check that EUTs correctly handle compressed 6LoWPAN packets (EUI-64 link-local, hop limit=64)
         </td>
       </tr>
       <tr>
@@ -867,7 +867,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -879,13 +879,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           5
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
         </td>
         <td>
           Verify
@@ -897,7 +909,7 @@
       <tr>
         <td></td>
         <td>
-          6
+          7
         </td>
         <td>
           Check
@@ -909,7 +921,7 @@
       <tr>
         <td></td>
         <td>
-          7
+          8
         </td>
         <td>
           Check
@@ -921,7 +933,7 @@
       <tr>
         <td></td>
         <td>
-          8
+          9
         </td>
         <td>
           Feature
@@ -933,7 +945,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          10
         </td>
         <td>
           Feature
@@ -945,7 +957,7 @@
       <tr>
         <td></td>
         <td>
-          10
+          11
         </td>
         <td>
           Verify
@@ -974,7 +986,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed 6LoWPAN packets when 16 bit short link local address is used
+          Check that EUTs correctly handle compressed 6LoWPAN packets (16-bit link-local, hop limit=64)
         </td>
       </tr>
       <tr>
@@ -1050,7 +1062,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -1062,13 +1074,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           5
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
         </td>
         <td>
           Verify
@@ -1080,7 +1104,7 @@
       <tr>
         <td></td>
         <td>
-          6
+          7
         </td>
         <td>
           Check
@@ -1092,7 +1116,7 @@
       <tr>
         <td></td>
         <td>
-          7
+          8
         </td>
         <td>
           Check
@@ -1104,7 +1128,7 @@
       <tr>
         <td></td>
         <td>
-          8
+          9
         </td>
         <td>
           Feature
@@ -1116,7 +1140,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          10
         </td>
         <td>
           Feature
@@ -1128,7 +1152,7 @@
       <tr>
         <td></td>
         <td>
-          10
+          11
         </td>
         <td>
           Verify
@@ -1157,7 +1181,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed 6LoWPAN packets when EUI-64 link local address is used
+          Check that EUTs correctly handle compressed 6LoWPAN packets (EUI-64 link-local, hop limit=63)
         </td>
       </tr>
       <tr>
@@ -1233,7 +1257,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -1245,13 +1269,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           5
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
         </td>
         <td>
           Verify
@@ -1263,7 +1299,7 @@
       <tr>
         <td></td>
         <td>
-          6
+          7
         </td>
         <td>
           Check
@@ -1275,7 +1311,7 @@
       <tr>
         <td></td>
         <td>
-          7
+          8
         </td>
         <td>
           Check
@@ -1287,7 +1323,7 @@
       <tr>
         <td></td>
         <td>
-          8
+          9
         </td>
         <td>
           Feature
@@ -1299,7 +1335,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          10
         </td>
         <td>
           Feature
@@ -1311,7 +1347,7 @@
       <tr>
         <td></td>
         <td>
-          10
+          11
         </td>
         <td>
           Verify
@@ -1340,7 +1376,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed 6LoWPAN packets when 16 bit short link local address is used
+          Check that EUTs correctly handle compressed 6LoWPAN packets (16-bit link-local, hop limit=63)
         </td>
       </tr>
       <tr>
@@ -1416,7 +1452,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -1428,13 +1464,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           5
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
         </td>
         <td>
           Verify
@@ -1446,7 +1494,7 @@
       <tr>
         <td></td>
         <td>
-          6
+          7
         </td>
         <td>
           Check
@@ -1458,7 +1506,7 @@
       <tr>
         <td></td>
         <td>
-          7
+          8
         </td>
         <td>
           Check
@@ -1470,7 +1518,7 @@
       <tr>
         <td></td>
         <td>
-          8
+          9
         </td>
         <td>
           Feature
@@ -1482,7 +1530,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          10
         </td>
         <td>
           Feature
@@ -1494,7 +1542,7 @@
       <tr>
         <td></td>
         <td>
-          10
+          11
         </td>
         <td>
           Verify
@@ -1523,7 +1571,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed UDP packets
+          Check that EUTs correctly handle compressed UDP packets (EUI-64, server port 5683)
         </td>
       </tr>
       <tr>
@@ -1585,7 +1633,7 @@
           Feature
         </td>
         <td>
-          NH is set, NHC is 11110000, the destination port is uncompressed 5683
+          NH is set, NHC is 111100x0, the source port is compressed to 8 bits (x=1) or uncompressed (x=0), the destination port is uncompressed 5683
         </td>
       </tr>
       <tr>
@@ -1621,7 +1669,7 @@
           Feature
         </td>
         <td>
-          NH is set, NHC is 11110000, the source port is uncompressed 5683
+          NH is set, NHC is 1111000x, the source port is uncompressed 5683, the destination port is compressed to 8 bits (x=1) or uncompressed (x=0)
         </td>
       </tr>
       <tr>
@@ -1656,7 +1704,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed UDP packets
+          Check that EUTs correctly handle compressed UDP packets (16-bit, server port 5683)
         </td>
       </tr>
       <tr>
@@ -1718,7 +1766,7 @@
           Feature
         </td>
         <td>
-          NH is set, NHC is 11110000, the destination port is uncompressed 5683
+          NH is set, NHC is 111100x0, the source port is compressed to 8 bits (x=1) or uncompressed (x=0), the destination port is uncompressed 5683
         </td>
       </tr>
       <tr>
@@ -1754,7 +1802,7 @@
           Feature
         </td>
         <td>
-          NH is set, NHC is 11110000, the source port is uncompressed 5683
+          NH is set, NHC is 1111000x, the source port is uncompressed 5683, the destination port is compressed to 8 bits (x=1) or uncompressed (x=0)
         </td>
       </tr>
       <tr>
@@ -1789,7 +1837,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed UDP packets
+          Check that EUTs correctly handle compressed UDP packets (EUI-64, server port 61616)
         </td>
       </tr>
       <tr>
@@ -1922,7 +1970,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle compressed UDP packets
+          Check that EUTs correctly handle compressed UDP packets (16-bit, server port 61616)
         </td>
       </tr>
       <tr>
@@ -2219,7 +2267,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that a host is able to register its global IPv6 address (16 bit short)
+          Check that a host is able to register its global IPv6 address (16-bit)
         </td>
       </tr>
       <tr>
@@ -2318,7 +2366,7 @@
           Check
         </td>
         <td>
-          The host configures its tentative global IPv6 address based on the PIO information in RA from the Router (16 bit short)
+          The host configures its tentative global IPv6 address based on the PIO information in RA from the Router (16-bit)
         </td>
       </tr>
       <tr>
@@ -2403,6 +2451,7 @@
         <td colspan='3'>
           <li>Header compression is enabled on both Host and Router</li>
           <li>Host is configured to use EUI-64 address</li>
+          <li>Host is up and registered its global address with the Server</li>
         </td>
       </tr>
       <tr>
@@ -2469,6 +2518,7 @@
         <td colspan='3'>
           <li>Header compression is enabled on both Host and Router</li>
           <li>Host is configured to use EUI-64 address</li>
+          <li>Host is up and registered its global address with the Server</li>
         </td>
       </tr>
       <tr>
@@ -2554,6 +2604,7 @@
           <li>Header compression is enabled on both Host and Router</li>
           <li>Host is configured to use EUI-64 address</li>
           <li>A CoAP ping server is installed on port 5683 of the host</li>
+          <li>Host is up and registered its global address with the Server</li>
         </td>
       </tr>
       <tr>
@@ -2618,7 +2669,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check host behavior under multiple prefixes
+          Check host behavior under multiple prefixes (EUI-64)
         </td>
       </tr>
       <tr>
@@ -2789,7 +2840,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check host behavior under multiple prefixes
+          Check host behavior under multiple prefixes (16-bit)
         </td>
       </tr>
       <tr>
@@ -2889,7 +2940,7 @@
           Check
         </td>
         <td>
-          The host configures a number of tentative global IPv6 address based on the PIO information in RA from the Router (16 bit short)
+          The host configures a number of tentative global IPv6 address based on the PIO information in RA from the Router (16-bit)
         </td>
       </tr>
       <tr>
@@ -2960,7 +3011,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs make use of context 0 with EUI-64 addresses
+          Check that EUTs make use of context 0 (EUI-64)
         </td>
       </tr>
       <tr>
@@ -3036,7 +3087,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -3048,7 +3099,7 @@
           Feature
         </td>
         <td>
-          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
+          HLIM is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3057,10 +3108,10 @@
           5
         </td>
         <td>
-          Check
+          Feature
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
         </td>
       </tr>
       <tr>
@@ -3069,10 +3120,10 @@
           6
         </td>
         <td>
-          Verify
+          Feature
         </td>
         <td>
-          EUT2 receives the Echo Request message from EUT1
+          The context identifier extension is not present (CID = 0)
         </td>
       </tr>
       <tr>
@@ -3084,13 +3135,37 @@
           Check
         </td>
         <td>
-          EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
+          Dispatch value in 6LowPAN packet is “01100x10”
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           8
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          9
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
         </td>
         <td>
           Feature
@@ -3102,7 +3177,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          11
         </td>
         <td>
           Feature
@@ -3114,7 +3189,19 @@
       <tr>
         <td></td>
         <td>
-          10
+          12
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          The context identifier extension is not present (CID = 0)
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          13
         </td>
         <td>
           Check
@@ -3143,7 +3230,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs make use of context 0 with 16 bit short addresses
+          Check that EUTs make use of context 0 (16-bit)
         </td>
       </tr>
       <tr>
@@ -3219,7 +3306,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -3231,7 +3318,7 @@
           Feature
         </td>
         <td>
-          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
+          HLIM is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3240,10 +3327,10 @@
           5
         </td>
         <td>
-          Check
+          Feature
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
         </td>
       </tr>
       <tr>
@@ -3252,10 +3339,10 @@
           6
         </td>
         <td>
-          Verify
+          Feature
         </td>
         <td>
-          EUT2 receives the Echo Request message from EUT1
+          The context identifier extension is not present (CID = 0)
         </td>
       </tr>
       <tr>
@@ -3267,13 +3354,37 @@
           Check
         </td>
         <td>
-          EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
+          Dispatch value in 6LowPAN packet is “01100x10”
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           8
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          9
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
         </td>
         <td>
           Feature
@@ -3285,7 +3396,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          11
         </td>
         <td>
           Feature
@@ -3297,7 +3408,19 @@
       <tr>
         <td></td>
         <td>
-          10
+          12
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          The context identifier extension is not present (CID = 0)
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          13
         </td>
         <td>
           Check
@@ -3326,7 +3449,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs make use of context ≠ 0 with EUI-64 addresses
+          Check that EUTs make use of context ≠ 0 (EUI-64)
         </td>
       </tr>
       <tr>
@@ -3402,7 +3525,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -3414,7 +3537,7 @@
           Feature
         </td>
         <td>
-          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
+          HLIM is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3423,10 +3546,10 @@
           5
         </td>
         <td>
-          Check
+          Feature
         </td>
         <td>
-          A Context Identifier Extension (CID) is used for this
+          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=01/11)
         </td>
       </tr>
       <tr>
@@ -3438,13 +3561,25 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          A Context Identifier Extension (CID) is used for this
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           7
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “01100x10”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          8
         </td>
         <td>
           Verify
@@ -3456,7 +3591,7 @@
       <tr>
         <td></td>
         <td>
-          8
+          9
         </td>
         <td>
           Check
@@ -3468,7 +3603,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          10
         </td>
         <td>
           Feature
@@ -3480,7 +3615,7 @@
       <tr>
         <td></td>
         <td>
-          10
+          11
         </td>
         <td>
           Feature
@@ -3492,7 +3627,7 @@
       <tr>
         <td></td>
         <td>
-          11
+          12
         </td>
         <td>
           Check
@@ -3504,7 +3639,7 @@
       <tr>
         <td></td>
         <td>
-          12
+          13
         </td>
         <td>
           Check
@@ -3533,7 +3668,7 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs make use of context ≠ 0 with 16 bit short addresses
+          Check that EUTs make use of context ≠ 0 (16-bit)
         </td>
       </tr>
       <tr>
@@ -3609,7 +3744,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -3621,7 +3756,7 @@
           Feature
         </td>
         <td>
-          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
+          HLIM is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3630,10 +3765,10 @@
           5
         </td>
         <td>
-          Check
+          Feature
         </td>
         <td>
-          A Context Identifier Extension (CID) is used for this
+          The compression makes use of the global prefix (SAC/DAC = 1, SAM/DAM=10/11)
         </td>
       </tr>
       <tr>
@@ -3645,13 +3780,25 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          A Context Identifier Extension (CID) is used for this
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           7
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “01100x10”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          8
         </td>
         <td>
           Verify
@@ -3663,7 +3810,7 @@
       <tr>
         <td></td>
         <td>
-          8
+          9
         </td>
         <td>
           Check
@@ -3675,7 +3822,7 @@
       <tr>
         <td></td>
         <td>
-          9
+          10
         </td>
         <td>
           Feature
@@ -3687,7 +3834,7 @@
       <tr>
         <td></td>
         <td>
-          10
+          11
         </td>
         <td>
           Feature
@@ -3699,7 +3846,7 @@
       <tr>
         <td></td>
         <td>
-          11
+          12
         </td>
         <td>
           Check
@@ -3711,7 +3858,7 @@
       <tr>
         <td></td>
         <td>
-          12
+          13
         </td>
         <td>
           Check
