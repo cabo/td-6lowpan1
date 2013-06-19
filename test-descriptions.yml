@@ -2,7 +2,7 @@ strings:
   - &nohc Header compression is disabled on both EUT1 and EUT2
   - &hc Header compression is enabled on both EUT1 and EUT2
   - &e64 EUT1 and EUT2 are configured to use EUI-64
-  - &e16 EUT1 and EUT2 are configured to use 16-bit short a addressddress
+  - &e16 EUT1 and EUT2 are configured to use 16-bit short address
   - &h64 EUT1 and EUT2 are configured with a default hop limit of 64
   - &h63 EUT1 and EUT2 are configured with a default hop limit of 63
   - &nn Node-Node
