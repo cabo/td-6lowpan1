@@ -78,6 +78,20 @@ TD_6LoWPAN_ND_01:
     - v: The Router receives the Neighbor Solicitation from the host.
     - c: The Router sends a Neighbor Advertisement with Status set to 0 (Dest = GP64)
     - v: The host updates the status of the tentative address
+    - s:
+      - The Router initiates an echo request to the Host's new global address, using its own global address as the source
+      - ICMP payload = 4 bytes, total IPv6 size 52 bytes
+      - Hop Limit is 64, no traffic class or flow label is being used
+    - c: The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Host receives the Echo Request message from the Router
+    - c: The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Router receives the Echo Reply message from the Host
 
 TD_6LoWPAN_ND_06:
   obj: Check host behavior under multiple prefixes (EUI-64)
@@ -101,6 +115,20 @@ TD_6LoWPAN_ND_06:
     - v: The Router receives the Neighbor Solicitations from the host.
     - c: The Router sends Neighbor Advertisements with Status set to 0 (Dest = GP64)
     - v: The host updates the status of the tentative addresses
+    - s:
+      - The Router initiates an echo request to one of the Host's new global addresses, using the appropriate own global address as the source
+      - ICMP payload = 4 bytes, total IPv6 size 52 bytes
+      - Hop Limit is 64, no traffic class or flow label is being used
+    - c: The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Host receives the Echo Request message from the Router
+    - c: The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Router receives the Echo Reply message from the Host
   not: Optional, as not all 6lrs and hosts allow multiple prefixes
 
 
@@ -331,6 +359,20 @@ TD_6LoWPAN_ND_02:
     - v: The Router receives the Neighbor Solicitation from the host.
     - c: The Router sends a Neighbor Advertisement with Status set to 0 (Dest = GP16)
     - v: The host updates the status of the tentative address
+    - s:
+      - The Router initiates an echo request to the Host's new global address, using its own global address as the source
+      - ICMP payload = 4 bytes, total IPv6 size 52 bytes
+      - Hop Limit is 64, no traffic class or flow label is being used
+    - c: The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Host receives the Echo Request message from the Router
+    - c: The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Router receives the Echo Reply message from the Host
 
 TD_6LoWPAN_ND_07:
   obj: Check host behavior under multiple prefixes (16-bit)
@@ -354,6 +396,20 @@ TD_6LoWPAN_ND_07:
     - v: The Router receives the Neighbor Solicitations from the host.
     - c: The Router sends Neighbor Advertisements with Status set to 0 (Dest = GP16)
     - v: The host updates the status of the tentative addresses
+    - s:
+      - The Router initiates an echo request to one of the Host's new global addresses, using the appropriate own global address as the source
+      - ICMP payload = 4 bytes, total IPv6 size 52 bytes
+      - Hop Limit is 64, no traffic class or flow label is being used
+    - c: The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Host receives the Echo Request message from the Router
+    - c: The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+    - c: Dispatch value in 6LowPAN packet is “011TFxHL”
+    - f: In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+    - f: HLIM (HL) is 10 and the hop limit field is compressed away
+    - v: The Router receives the Echo Reply message from the Host
   not: Optional, as not all 6lrs and hosts allow multiple prefixes
 
 
