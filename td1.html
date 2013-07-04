@@ -515,144 +515,6 @@
       <tr>
         <th>Objective:</th>
         <td colspan='3'>
-          Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (EUI-64 link-local)
-        </td>
-      </tr>
-      <tr>
-        <th>Configuration:</th>
-        <td colspan='3'>
-          Node-Node
-        </td>
-      </tr>
-      <tr>
-        <th>References:</th>
-        <td colspan='3'>
-          RFC 4944 5.1, 8
-        </td>
-      </tr>
-      <tr>
-        <th>Pre-test conditions:</th>
-        <td colspan='3'>
-          <li>Header compression is disabled on both EUT1 and EUT2</li>
-          <li>EUT1 and EUT2 are configured to use EUI-64</li>
-        </td>
-      </tr>
-      <tr>
-        <th>Test Sequence:</th>
-        <td width='10 %'>Step</td>
-        <td width='15 %'>Type</td>
-        <td>Description</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          0
-        </td>
-        <td>
-          Stimulus
-        </td>
-        <td>
-          EUT1 initiates an echo request to the link-local all-nodes multicast address (FF02::1)  (ICMP payload = 4 bytes, total IPv6 size 52 bytes)
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          1
-        </td>
-        <td>
-          Check
-        </td>
-        <td>
-          EUT1 sends an uncompressed 6LoWPAN packet containing the Echo Request message to EUT2
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          2
-        </td>
-        <td>
-          Check
-        </td>
-        <td>
-          Dispatch value in 6LowPAN packet is “01000001”
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          3
-        </td>
-        <td>
-          Verify
-        </td>
-        <td>
-          EUT2 receives the Echo Request message  from EUT1
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          4
-        </td>
-        <td>
-          Check
-        </td>
-        <td>
-          EUT2 sends an uncompressed 6LoWPAN packet containing the Echo Reply message to EUT1
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          5
-        </td>
-        <td>
-          Check
-        </td>
-        <td>
-          Dispatch value in 6LowPAN packet is “01000001”
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          6
-        </td>
-        <td>
-          Verify
-        </td>
-        <td>
-          EUT1 receives the Echo Reply message from EUT2
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          7
-        </td>
-        <td>
-          Check
-        </td>
-        <td>
-          The data in the echo reply message is identical to that in the echo request message
-        </td>
-      </tr>
-    </table>
-    <table border='1' width='100%'>
-      <tr>
-        <th colspan='4'>Interoperability Test Description</th>
-      </tr>
-      <tr>
-        <th width='15%'>Identifier:</th>
-        <td colspan='3'>
-          TD_6LoWPAN_FORMAT_06
-        </td>
-      </tr>
-      <tr>
-        <th>Objective:</th>
-        <td colspan='3'>
           Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (16-bit link-local)
         </td>
       </tr>
@@ -785,6 +647,386 @@
       <tr>
         <th width='15%'>Identifier:</th>
         <td colspan='3'>
+          TD_6LoWPAN_FORMAT_06
+        </td>
+      </tr>
+      <tr>
+        <th>Objective:</th>
+        <td colspan='3'>
+          Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (EUI-64 link-local)
+        </td>
+      </tr>
+      <tr>
+        <th>Configuration:</th>
+        <td colspan='3'>
+          Node-Node
+        </td>
+      </tr>
+      <tr>
+        <th>References:</th>
+        <td colspan='3'>
+          RFC 4944 5.1, 8
+        </td>
+      </tr>
+      <tr>
+        <th>Pre-test conditions:</th>
+        <td colspan='3'>
+          <li>Header compression is disabled on both EUT1 and EUT2</li>
+          <li>EUT1 and EUT2 are configured to use EUI-64</li>
+        </td>
+      </tr>
+      <tr>
+        <th>Test Sequence:</th>
+        <td width='10 %'>Step</td>
+        <td width='15 %'>Type</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          0
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          EUT1 initiates an echo request to the link-local all-nodes multicast address (FF02::1)  (ICMP payload = 4 bytes, total IPv6 size 52 bytes)
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          1
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT1 sends an uncompressed 6LoWPAN packet containing the Echo Request message to EUT2
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          2
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “01000001”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          3
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message  from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          4
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT2 sends an uncompressed 6LoWPAN packet containing the Echo Reply message to EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          5
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “01000001”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT1 receives the Echo Reply message from EUT2
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          7
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The data in the echo reply message is identical to that in the echo request message
+        </td>
+      </tr>
+    </table>
+    <table border='1' width='100%'>
+      <tr>
+        <th colspan='4'>Interoperability Test Description</th>
+      </tr>
+      <tr>
+        <th width='15%'>Identifier:</th>
+        <td colspan='3'>
+          TD_6LoWPAN_FORMAT_07
+        </td>
+      </tr>
+      <tr>
+        <th>Objective:</th>
+        <td colspan='3'>
+          Check that EUTs correctly handle uncompressed 6LoWPAN packets (EUI-64 to 16-bit link-local)
+        </td>
+      </tr>
+      <tr>
+        <th>Configuration:</th>
+        <td colspan='3'>
+          Node-Node
+        </td>
+      </tr>
+      <tr>
+        <th>References:</th>
+        <td colspan='3'>
+          RFC 4944 5.1, 8
+        </td>
+      </tr>
+      <tr>
+        <th>Pre-test conditions:</th>
+        <td colspan='3'>
+          <li>Header compression is disabled on both EUT1 and EUT2</li>
+          <li>EUT1 is configured to use EUI-64 and EUT2 is configured to use 16-bit short address</li>
+        </td>
+      </tr>
+      <tr>
+        <th>Test Sequence:</th>
+        <td width='10 %'>Step</td>
+        <td width='15 %'>Type</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          0
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>EUT1 initiates an echo request to EUT2's link-local address</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          1
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          <li>EUT1 sends an uncompressed 6LoWPAN packet containing the Echo Request message to EUT2's link-local address</li>
+          <li>Dispatch value in 6LowPAN packet is “01000001”</li>
+          <li>Source address is EUI-64 link-local</li>
+          <li>Destination address is 16 bit short link-local</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          2
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message  from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          3
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          <li>EUT2 sends an uncompressed 6LoWPAN packet containing the Echo Reply message to EUT1's link-local address</li>
+          <li>Dispatch value in 6LowPAN packet is “01000001”</li>
+          <li>Source address is 16 bit short link-local</li>
+          <li>Destination address is EUI-64 link-local</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          4
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT1 receives the Echo Reply message from EUT2
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          5
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The data received in the echo reply message is identical to that sent in EUT1's echo request message
+        </td>
+      </tr>
+    </table>
+    <table border='1' width='100%'>
+      <tr>
+        <th colspan='4'>Interoperability Test Description</th>
+      </tr>
+      <tr>
+        <th width='15%'>Identifier:</th>
+        <td colspan='3'>
+          TD_6LoWPAN_FORMAT_08
+        </td>
+      </tr>
+      <tr>
+        <th>Objective:</th>
+        <td colspan='3'>
+          Check that EUTs correctly handle uncompressed 6LoWPAN packets (16-bit to EUI-64 link-local)
+        </td>
+      </tr>
+      <tr>
+        <th>Configuration:</th>
+        <td colspan='3'>
+          Node-Node
+        </td>
+      </tr>
+      <tr>
+        <th>References:</th>
+        <td colspan='3'>
+          RFC 4944 5.1, 8
+        </td>
+      </tr>
+      <tr>
+        <th>Pre-test conditions:</th>
+        <td colspan='3'>
+          <li>Header compression is disabled on both EUT1 and EUT2</li>
+          <li>EUT1 is configured to use 16-bit short address and EUT2 is configured to use EUI-64</li>
+        </td>
+      </tr>
+      <tr>
+        <th>Test Sequence:</th>
+        <td width='10 %'>Step</td>
+        <td width='15 %'>Type</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          0
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>EUT1 initiates an echo request to EUT2's link-local address</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          1
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          <li>EUT1 sends an uncompressed 6LoWPAN packet containing the Echo Request message to EUT2's link-local address</li>
+          <li>Dispatch value in 6LowPAN packet is “01000001”</li>
+          <li>Source address is 16 bit short link-local</li>
+          <li>Destination address is EUI-64 link-local</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          2
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message  from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          3
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          <li>EUT2 sends an uncompressed 6LoWPAN packet containing the Echo Reply message to EUT1's link-local address</li>
+          <li>Dispatch value in 6LowPAN packet is “01000001”</li>
+          <li>Source address is EUI-64 link-local</li>
+          <li>Destination address is 16 bit short link-local</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          4
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT1 receives the Echo Reply message from EUT2
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          5
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The data received in the echo reply message is identical to that sent in EUT1's echo request message
+        </td>
+      </tr>
+    </table>
+    <table border='1' width='100%'>
+      <tr>
+        <th colspan='4'>Interoperability Test Description</th>
+      </tr>
+      <tr>
+        <th width='15%'>Identifier:</th>
+        <td colspan='3'>
           TD_6LoWPAN_HC_01
         </td>
       </tr>
@@ -855,7 +1097,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -879,7 +1121,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -927,7 +1169,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -939,7 +1181,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -951,13 +1193,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           11
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
         </td>
         <td>
           Verify
@@ -1050,7 +1304,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -1074,7 +1328,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -1122,7 +1376,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -1134,7 +1388,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 10 and the hop limit field is compressed away
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -1146,13 +1400,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           11
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
         </td>
         <td>
           Verify
@@ -1245,7 +1511,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -1269,7 +1535,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
         </td>
       </tr>
       <tr>
@@ -1317,7 +1583,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -1329,7 +1595,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -1341,13 +1607,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           11
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
         </td>
         <td>
           Verify
@@ -1440,7 +1718,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -1464,7 +1742,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
         </td>
       </tr>
       <tr>
@@ -1512,7 +1790,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -1524,7 +1802,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM is 00 and the hop limit field is carried in-line
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
         </td>
       </tr>
       <tr>
@@ -1536,13 +1814,25 @@
           Feature
         </td>
         <td>
-          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
         </td>
       </tr>
       <tr>
         <td></td>
         <td>
           11
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
         </td>
         <td>
           Verify
@@ -2097,6 +2387,418 @@
       <tr>
         <th width='15%'>Identifier:</th>
         <td colspan='3'>
+          TD_6LoWPAN_HC_09
+        </td>
+      </tr>
+      <tr>
+        <th>Objective:</th>
+        <td colspan='3'>
+          Check that EUTs correctly handle compressed 6LoWPAN packets (EUI-64 to 16-bit link-local, hop limit=64)
+        </td>
+      </tr>
+      <tr>
+        <th>Configuration:</th>
+        <td colspan='3'>
+          Node-Node
+        </td>
+      </tr>
+      <tr>
+        <th>References:</th>
+        <td colspan='3'>
+          RFC 6282 section 3
+        </td>
+      </tr>
+      <tr>
+        <th>Pre-test conditions:</th>
+        <td colspan='3'>
+          <li>Header compression is enabled on both EUT1 and EUT2</li>
+          <li>EUT1 is configured to use EUI-64 and EUT2 is configured to use 16-bit short address</li>
+        </td>
+      </tr>
+      <tr>
+        <th>Test Sequence:</th>
+        <td width='10 %'>Step</td>
+        <td width='15 %'>Type</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          0
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>EUT1 initiates an echo request to EUT2's link-local address</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+          <li>Hop Limit is 64, no traffic class or flow label is being used</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          1
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT1 sends a compressed 6LoWPAN packet containing the Echo Request message to EUT2
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          2
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          3
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          4
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          5
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          7
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          8
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          9
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          11
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT1 receives the Echo Reply message from EUT2
+        </td>
+      </tr>
+      <th>
+        Notes:
+      </th>
+      <td colspan='3'>
+        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+      </td>
+    </table>
+    <table border='1' width='100%'>
+      <tr>
+        <th colspan='4'>Interoperability Test Description</th>
+      </tr>
+      <tr>
+        <th width='15%'>Identifier:</th>
+        <td colspan='3'>
+          TD_6LoWPAN_HC_10
+        </td>
+      </tr>
+      <tr>
+        <th>Objective:</th>
+        <td colspan='3'>
+          Check that EUTs correctly handle compressed 6LoWPAN packets (16-bit to EUI-64 link-local, hop limit=64)
+        </td>
+      </tr>
+      <tr>
+        <th>Configuration:</th>
+        <td colspan='3'>
+          Node-Node
+        </td>
+      </tr>
+      <tr>
+        <th>References:</th>
+        <td colspan='3'>
+          RFC 6282 section 3
+        </td>
+      </tr>
+      <tr>
+        <th>Pre-test conditions:</th>
+        <td colspan='3'>
+          <li>Header compression is enabled on both EUT1 and EUT2</li>
+          <li>EUT1 is configured to use 16-bit short address and EUT2 is configured to use EUI-64</li>
+        </td>
+      </tr>
+      <tr>
+        <th>Test Sequence:</th>
+        <td width='10 %'>Step</td>
+        <td width='15 %'>Type</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          0
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>EUT1 initiates an echo request to EUT2's link-local address</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+          <li>Hop Limit is 64, no traffic class or flow label is being used</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          1
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT1 sends a compressed 6LoWPAN packet containing the Echo Request message to EUT2
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          2
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          3
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          4
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          5
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          6
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT2 receives the Echo Request message from EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          7
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          EUT2 sends a compressed 6LoWPAN packet containing the Echo Reply message to EUT1
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          8
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          9
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          11
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, SAC=0, SAM=11; DAC=0; DAM=11
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          EUT1 receives the Echo Reply message from EUT2
+        </td>
+      </tr>
+      <th>
+        Notes:
+      </th>
+      <td colspan='3'>
+        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+      </td>
+    </table>
+    <table border='1' width='100%'>
+      <tr>
+        <th colspan='4'>Interoperability Test Description</th>
+      </tr>
+      <tr>
+        <th width='15%'>Identifier:</th>
+        <td colspan='3'>
           TD_6LoWPAN_ND_01
         </td>
       </tr>
@@ -2251,6 +2953,140 @@
         </td>
         <td>
           The host updates the status of the tentative address
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>The Router initiates an echo request to the Host's new global address, using its own global address as the source</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+          <li>Hop Limit is 64, no traffic class or flow label is being used</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          11
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          13
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          14
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          15
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Host receives the Echo Request message from the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          16
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          17
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          18
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          19
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          20
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Router receives the Echo Reply message from the Host
         </td>
       </tr>
     </table>
@@ -2417,6 +3253,140 @@
           The host updates the status of the tentative address
         </td>
       </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>The Router initiates an echo request to the Host's new global address, using its own global address as the source</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+          <li>Hop Limit is 64, no traffic class or flow label is being used</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          11
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          13
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          14
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          15
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Host receives the Echo Request message from the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          16
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          17
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          18
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          19
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          20
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Router receives the Echo Reply message from the Host
+        </td>
+      </tr>
     </table>
     <table border='1' width='100%'>
       <tr>
@@ -2451,7 +3421,7 @@
         <td colspan='3'>
           <li>Header compression is enabled on both Host and Router</li>
           <li>Host is configured to use EUI-64 address</li>
-          <li>Host is up and registered its global address with the Server</li>
+          <li>Host is up and registered its global address with the Router</li>
         </td>
       </tr>
       <tr>
@@ -2518,7 +3488,7 @@
         <td colspan='3'>
           <li>Header compression is enabled on both Host and Router</li>
           <li>Host is configured to use EUI-64 address</li>
-          <li>Host is up and registered its global address with the Server</li>
+          <li>Host is up and registered its global address with the Router</li>
         </td>
       </tr>
       <tr>
@@ -2604,7 +3574,7 @@
           <li>Header compression is enabled on both Host and Router</li>
           <li>Host is configured to use EUI-64 address</li>
           <li>A CoAP ping server is installed on port 5683 of the host</li>
-          <li>Host is up and registered its global address with the Server</li>
+          <li>Host is up and registered its global address with the Router</li>
         </td>
       </tr>
       <tr>
@@ -2820,6 +3790,140 @@
           The host updates the status of the tentative addresses
         </td>
       </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>The Router initiates an echo request to one of the Host's new global addresses, using the appropriate own global address as the source</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+          <li>Hop Limit is 64, no traffic class or flow label is being used</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          11
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          13
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          14
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          15
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Host receives the Echo Request message from the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          16
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          17
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          18
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          19
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          20
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Router receives the Echo Reply message from the Host
+        </td>
+      </tr>
       <th>
         Notes:
       </th>
@@ -2991,6 +4095,140 @@
           The host updates the status of the tentative addresses
         </td>
       </tr>
+      <tr>
+        <td></td>
+        <td>
+          10
+        </td>
+        <td>
+          Stimulus
+        </td>
+        <td>
+          <li>The Router initiates an echo request to one of the Host's new global addresses, using the appropriate own global address as the source</li>
+          <li>ICMP payload = 4 bytes, total IPv6 size 52 bytes</li>
+          <li>Hop Limit is 64, no traffic class or flow label is being used</li>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          11
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Router sends a 6LoWPAN packet containing the Echo Request message to the Host
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          12
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          13
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          14
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          15
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Host receives the Echo Request message from the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          16
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          The Host sends a 6LoWPAN packet containing the Echo Reply message to the Router
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          17
+        </td>
+        <td>
+          Check
+        </td>
+        <td>
+          Dispatch value in 6LowPAN packet is “011TFxHL”
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          18
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          In IP_HC, TF is 11 and the ecn, dscp and flow label fields are compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          19
+        </td>
+        <td>
+          Feature
+        </td>
+        <td>
+          HLIM (HL) is 10 and the hop limit field is compressed away
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          20
+        </td>
+        <td>
+          Verify
+        </td>
+        <td>
+          The Router receives the Echo Reply message from the Host
+        </td>
+      </tr>
       <th>
         Notes:
       </th>
@@ -3099,7 +4337,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3135,7 +4373,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -3171,7 +4409,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3207,7 +4445,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <th>
@@ -3318,7 +4556,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3354,7 +4592,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -3390,7 +4628,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3426,7 +4664,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <th>
@@ -3537,7 +4775,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3573,7 +4811,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -3609,7 +4847,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3645,7 +4883,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <th>
@@ -3756,7 +4994,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3792,7 +5030,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <tr>
@@ -3828,7 +5066,7 @@
           Feature
         </td>
         <td>
-          HLIM is 10 and the hop limit field is compressed away
+          HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3864,7 +5102,7 @@
           Check
         </td>
         <td>
-          Dispatch value in 6LowPAN packet is “01100x10”
+          Dispatch value in 6LowPAN packet is “011TFxHL”
         </td>
       </tr>
       <th>
