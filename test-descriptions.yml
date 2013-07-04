@@ -39,7 +39,7 @@ TD_6LoWPAN_FORMAT_01:
     - v: EUT1 receives the Echo Reply message from EUT2
     - c: The data received in the echo reply message is identical to that sent in EUT1's echo request message
 
-TD_6LoWPAN_FORMAT_05:
+TD_6LoWPAN_FORMAT_06:
   obj: Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (EUI-64 link-local)
   cfg: *nn
   ref: RFC 4944 5.1, 8
@@ -290,7 +290,7 @@ TD_6LoWPAN_FORMAT_02:
     - v: EUT1 receives the Echo Reply message from EUT2
     - c: The data received in the echo reply message is identical to that sent in EUT1's echo request message
 
-TD_6LoWPAN_FORMAT_06:
+TD_6LoWPAN_FORMAT_05:
   obj: Check that EUTs correctly handle uncompressed 6LoWPAN multicast to all-nodes (16-bit link-local)
   cfg: *nn
   ref: RFC 4944 5.1, 8
