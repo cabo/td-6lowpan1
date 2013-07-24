@@ -316,8 +316,8 @@
         <td>
           <li>EUT1 sends a sequence of uncompressed 6LoWPAN packets containing the Echo Request fragments to EUT2</li>
           <li>EUT1 correctly fragments the Echo Request:</li>
-          <li>a 6LoWPAN FRAG1 header is included in the first packet</li>
-          <li>a 6LoWPAN FRAGN header is included in all following packets</li>
+          <li>a 6LoWPAN FRAG1 header (dispatch 11000xxx) is included in the first packet</li>
+          <li>a 6LoWPAN FRAGN header (dispatch 11100xxx) is included in all following packets</li>
           <li>the offsets form a contiguous sequence</li>
           <li>all fragments except the last one must be multiples of 8 bytes</li>
         </td>
@@ -345,8 +345,8 @@
         <td>
           <li>EUT2 sends a sequence of uncompressed 6LoWPAN packets containing the Echo Reply message to EUT1</li>
           <li>EUT1 correctly fragments the Echo Reply:</li>
-          <li>a 6LoWPAN FRAG1 header is included in the first packet</li>
-          <li>a 6LoWPAN FRAGN header is included in all following packets</li>
+          <li>a 6LoWPAN FRAG1 header (dispatch 11000xxx) is included in the first packet</li>
+          <li>a 6LoWPAN FRAGN header (dispatch 11100xxx) is included in all following packets</li>
           <li>the offsets form a contiguous sequence</li>
           <li>all fragments except the last one must be multiples of 8 bytes</li>
           <li>The data in the echo reply message packets is identical to that sent in the echo request message packets</li>
@@ -441,8 +441,8 @@
         <td>
           <li>EUT1 sends a sequence of uncompressed 6LoWPAN packets containing the Echo Request fragments to EUT2</li>
           <li>EUT1 correctly fragments the Echo Request:</li>
-          <li>a 6LoWPAN FRAG1 header is included in the first packet</li>
-          <li>a 6LoWPAN FRAGN header is included in all following packets</li>
+          <li>a 6LoWPAN FRAG1 header (dispatch 11000xxx) is included in the first packet</li>
+          <li>a 6LoWPAN FRAGN header (dispatch 11100xxx) is included in all following packets</li>
           <li>the offsets form a contiguous sequence</li>
           <li>all fragments except the last one must be multiples of 8 bytes</li>
         </td>
@@ -470,8 +470,8 @@
         <td>
           <li>EUT2 sends a sequence of uncompressed 6LoWPAN packets containing the Echo Reply message to EUT1</li>
           <li>EUT1 correctly fragments the Echo Reply:</li>
-          <li>a 6LoWPAN FRAG1 header is included in the first packet</li>
-          <li>a 6LoWPAN FRAGN header is included in all following packets</li>
+          <li>a 6LoWPAN FRAG1 header (dispatch 11000xxx) is included in the first packet</li>
+          <li>a 6LoWPAN FRAGN header (dispatch 11100xxx) is included in all following packets</li>
           <li>the offsets form a contiguous sequence</li>
           <li>all fragments except the last one must be multiples of 8 bytes</li>
           <li>The data in the echo reply message packets is identical to that sent in the echo request message packets</li>
@@ -1224,7 +1224,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that best compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -1431,7 +1432,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that best compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -1638,7 +1640,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that best compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -1845,7 +1848,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that best compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -2480,7 +2484,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -2552,7 +2556,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -2583,7 +2587,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that best compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -2686,7 +2691,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -2758,7 +2763,7 @@
           Feature
         </td>
         <td>
-          In IP_HC, HLIM (HL) is 00 and the hop limit field is carried in-line
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -2789,7 +2794,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that best compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that best compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -3014,7 +3020,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3074,7 +3080,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3089,6 +3095,12 @@
           The Router receives the Echo Reply message from the Host
         </td>
       </tr>
+      <th>
+        Notes:
+      </th>
+      <td colspan='3'>
+        The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.
+      </td>
     </table>
     <table border='1' width='100%'>
       <tr>
@@ -3312,7 +3324,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3372,7 +3384,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3387,6 +3399,12 @@
           The Router receives the Echo Reply message from the Host
         </td>
       </tr>
+      <th>
+        Notes:
+      </th>
+      <td colspan='3'>
+        The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.
+      </td>
     </table>
     <table border='1' width='100%'>
       <tr>
@@ -3849,7 +3867,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3909,7 +3927,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -3928,7 +3946,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        Optional, as not all 6lrs and hosts allow multiple prefixes
+        <li>Optional, as not all 6lrs and hosts allow multiple prefixes</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -4154,7 +4173,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4214,7 +4233,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4233,7 +4252,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        Optional, as not all 6lrs and hosts allow multiple prefixes
+        <li>Optional, as not all 6lrs and hosts allow multiple prefixes</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -4337,7 +4357,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4409,7 +4429,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4452,7 +4472,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that good compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that good compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -4556,7 +4577,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4628,7 +4649,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4671,7 +4692,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that good compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that good compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -4775,7 +4797,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4847,7 +4869,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -4890,7 +4912,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that good compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that good compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
     <table border='1' width='100%'>
@@ -4994,7 +5017,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -5066,7 +5089,7 @@
           Feature
         </td>
         <td>
-          HLIM (HL) is 10 and the hop limit field is compressed away
+          In IP_HC, HLIM (HL) is 10 and the hop limit field is compressed away
         </td>
       </tr>
       <tr>
@@ -5109,7 +5132,8 @@
         Notes:
       </th>
       <td colspan='3'>
-        The feature tests check that good compression is used (but this is not a requirement for interoperability)
+        <li>The feature tests check that good compression is used (but this is not a requirement for interoperability)</li>
+        <li>The Echo Reply message might use a different hop limit in some implementations, then the HLIM value might also be different.</li>
       </td>
     </table>
   </body>
