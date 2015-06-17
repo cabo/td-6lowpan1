@@ -8,7 +8,7 @@ This repo hosts a main "source" file and a generated file:
 - test-descriptions.yml.  This is a [YAML][] file with a
   machine-readable form of the test descriptions.
 
-- td1.html.  This is automatically generated from
+- [td1.html][td1].  This is automatically generated from
   test-descriptions.yml.  Strictly speaking, it should not be under
   source control, but putting it here makes life easier.  It's not a
   train wreck to issue a pull request on this file, but you are
@@ -17,5 +17,6 @@ This repo hosts a main "source" file and a generated file:
 Don't forget to [register][6lowplug] for the plugtest!  
 (It's the well-hidden green button on that page...)
 
+[td1]: http://rawgit.com/cabo/td-6lowpan1/master/td1.html
 [6lowplug]: http://www.etsi.org/news-events/events/663-2013-6lowpan-plugtests
 [YAML]: http://www.yaml.org/spec/1.2/spec.html
